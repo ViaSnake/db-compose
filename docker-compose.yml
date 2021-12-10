@@ -4,6 +4,7 @@ services:
 
   mariadb:
     image: mariadb:latest
+    command: --transaction-isolation=READ-COMMITTED --binlog-format=ROW --innodb-file-per-table=1 --skip-innodb-read-only-compressed
     container_name: mariadb
     restart: always
     ports:
