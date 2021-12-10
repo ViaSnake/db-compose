@@ -6,6 +6,8 @@ services:
     image: mariadb:latest
     container_name: mariadb
     restart: always
+    ports:
+      - '3306:3306'
     volumes:
       - "/mnt/hdd/mysql:/var/lib/mysql"
     environment:
