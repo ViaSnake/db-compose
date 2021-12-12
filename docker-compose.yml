@@ -10,11 +10,9 @@ services:
     ports:
       - '3306:3306'
     volumes:
-      - "/mnt/hdd/mysql:/var/lib/mysql"
+      - "/data/mariadb:/var/lib/mysql"
     environment:
       MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD}"
-      MYSQL_USER: "${MYSQL_USER}"
-      MYSQL_PASSWORD: "${MYSQL_PASSWORD}"
 
   adminer:
     image: adminer:latest
