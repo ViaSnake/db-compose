@@ -14,6 +14,13 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD}"
 
+  redis:
+    image: "redis:latest"
+    ports:
+      - "6379:6379"
+    volumes:
+      - "/data/redis:/data"
+
   adminer:
     image: adminer:latest
     container_name: adminer
