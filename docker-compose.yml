@@ -22,18 +22,6 @@ services:
     volumes:
       - "/data/redis:/data"
 
-  postgresql:
-    image: postgres:latest
-    container_name: postgresql
-    ports:
-      - "5432:5432"
-    restart: always
-    environment:
-      POSTGRES_USER: ${POSTGRES_USER}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
-    volumes:
-      - "/data/postgresql:/var/lib/postgresql/data"
-
   adminer:
     image: adminer:latest
     container_name: adminer
